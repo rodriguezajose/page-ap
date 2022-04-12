@@ -1,0 +1,234 @@
+ 
+ body{
+    margin:0px;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+    
+    }
+
+
+    /*TODO ESTO ES SOBRE EL MENU SLIDER */
+    .barra {
+        font-family: 'Lato', sans-serif;
+        /**Alto y ancho de donde se va a activar cuando pase el mouse**/
+        width:10%;
+        height:9%;
+        /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+        position:fixed;
+        /*Tiempo en el que va a transitar la animacion*/
+        transition: .4s all ;
+        /*este arriba de todo en la pantalla*/
+        z-index: 2;  
+       
+    }
+    
+    .barra ul{
+        /*solucionar espacios no deseados*/
+        padding:0px;
+        text-align: center;
+            
+    }
+    .barra  li{
+        /*Velocidad de transicion del contenido*/
+        transition:all .3s;
+        list-style: none; 
+        
+    }
+    .barra h4 {
+        margin-bottom: 25%; /* ESTO ES PARA DARLE UN ESPACIO EN EL MENU CON INICIO */
+        
+        
+    }
+    
+    .barra a{
+        text-decoration: none;
+        
+        font-weight: normal;
+        
+        /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+        transition: .3s all ;
+        /*Se ocultan los elementos*/
+        font-size: 0px;
+        padding:0px;
+    }
+    
+    .barra  h4{
+        text-align: center;
+        color:white;
+        padding:7px;
+        padding-bottom:7px;
+    
+        /*Se oculta el h2*/
+        font-size:0px;   
+    }
+    
+    .barra img{
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+    
+    .barra:hover{
+        /*Tamaño cuando el cursor señale la barra*/
+        width: 60%;
+        height: 100vh;
+        
+        /*Color*/
+        background: rgba(22, 22, 22, 0.98);
+        
+    }
+    .barra:hover h4{
+        /*posicion dentro de barra del h2*/
+        padding:15px;
+        font-size: 15px; /* AQUI PUEDO CAMBIAR EL TAMAÑO DEL TITULO DEL MENU SLIDER */
+    }
+    .barra:hover a{ 
+        font-size:20px ;
+        color:white;
+        /*Se usa el display block para que el enlace respete el margin*/
+        display: block;
+        padding:20px;
+        border-left: 4px solid #ffffff;/* ESTO ES PARA DARLE EFECTO DE GORDE LEFT SOLO PARA UN LADO */
+        
+    }
+    .barra:hover img{
+        /*Desaparecer la imagen*/
+        height:0px;
+    }
+    
+    
+    .barra:hover li{
+        border-top:1px solid #0e0e0e;
+        /*Espacios entre las lineas y el contenido*/
+        
+        width:100%;
+        margin-top: 4%;
+            
+    }
+    .barra:hover ul:last-of-type{
+    
+    
+        border-bottom: 1px solid #0e0e0e;
+    }
+    
+    .barra:hover a:hover{ 
+        font-size: 25px;
+        padding: 25px 0px; 
+        background: rgba(21, 132, 139, 0.98);  
+    }
+    
+    @media (min-width: 768px){
+        .barra:hover{
+        width: 45%;
+        }
+    }
+    /*TODO ESTO DE ARRIBA ES SOBRE EL MENU SLIDER */
+ 
+ 
+ 
+
+
+
+    .wrapper{
+        margin-top: -35px;
+      }
+      
+      .wrapper h1{
+        font-family: 'Allura', cursive;
+        font-size: 52px;
+        margin-bottom: 60px;
+        text-align: center;
+      }
+      
+      .team{
+        display: flex;
+        justify-content: center;
+        width: auto;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+      
+      .team .team_member{
+        background: #fff;
+        margin: 5px;
+        margin-bottom: 50px;
+        width: 300px;
+        padding: 20px;
+        line-height: 20px;
+        color: #8e8b8b;  
+        position: relative;
+      }
+      
+      .team .team_member h3{
+        color: #81c644;
+        font-size: 26px;
+        margin-top: 50px;
+      }
+      
+      .team .team_member p.role{
+        color: #ccc;
+        margin: 12px 0;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      
+      .team .team_member .team_img{
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      
+      .team .team_member .team_img img{
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+      }
+      
+
+
+
+
+      /*=================
+  TODO ESTO ES SOBRE EL LOGO FLOAT DE WSP==========*/
+
+  .btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
+
+
+
+
+
+
+
+
+

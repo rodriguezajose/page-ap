@@ -1,0 +1,637 @@
+body{
+    margin:0px;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    }
+    /*TODO ESTO ES SOBRE EL MENU SLIDER */
+    .barra {
+        font-family: 'Lato', sans-serif;
+        /**Alto y ancho de donde se va a activar cuando pase el mouse**/
+        width:10%;
+        height:9%;
+        /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+        position:fixed;
+        /*Tiempo en el que va a transitar la animacion*/
+        transition: .4s all ;
+        /*este arriba de todo en la pantalla*/
+        z-index: 2;  
+       
+    }
+    
+    .barra ul{
+        /*solucionar espacios no deseados*/
+        padding:0px;
+        text-align: center;
+            
+    }
+    .barra  li{
+        /*Velocidad de transicion del contenido*/
+        transition:all .3s;
+        list-style: none; 
+        
+    }
+    .barra h4 {
+        margin-bottom: 25%; /* ESTO ES PARA DARLE UN ESPACIO EN EL MENU CON INICIO */
+        
+        
+    }
+    
+    .barra a{
+        text-decoration: none;
+        
+        font-weight: normal;
+        
+        /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+        transition: .3s all ;
+        /*Se ocultan los elementos*/
+        font-size: 0px;
+        padding:0px;
+      
+    }
+    
+    .barra  h4{
+        text-align: center;
+        color:white;
+        padding:7px;
+        padding-bottom:7px;
+    
+        /*Se oculta el h2*/
+        font-size:0px;   
+    }
+    
+    .barra img{
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+    
+    .barra:hover{
+        /*Tamaño cuando el cursor señale la barra*/
+        width: 60%;
+        height: 100vh;
+        
+        /*Color*/
+        background: rgba(22, 22, 22, 0.98);
+        
+    }
+    .barra:hover h4{
+        /*posicion dentro de barra del h2*/
+        padding:15px;
+        font-size: 15px; /* AQUI PUEDO CAMBIAR EL TAMAÑO DEL TITULO DEL MENU SLIDER */
+    }
+    .barra:hover a{ 
+        font-size:20px ;
+        color:white;
+        /*Se usa el display block para que el enlace respete el margin*/
+        display: block;
+        padding:20px;
+        border-left: 4px solid #ffffff;/* ESTO ES PARA DARLE EFECTO DE GORDE LEFT SOLO PARA UN LADO */
+        
+        
+    }
+    .barra:hover img{
+        /*Desaparecer la imagen*/
+        height:0px;
+    }
+    
+    
+    .barra:hover li{
+        border-top:1px solid #0e0e0e;
+        /*Espacios entre las lineas y el contenido*/
+        
+        width:100%;
+        margin-top: 4%;
+            
+    }
+    .barra:hover ul:last-of-type{
+    
+    
+        border-bottom: 1px solid #0e0e0e;
+    }
+    
+    .barra:hover a:hover{ 
+        font-size: 25px;
+        padding: 25px 0px; 
+        background: rgba(21, 132, 139, 0.98);  
+        
+        
+    }
+    
+    @media (min-width: 768px){
+        .barra:hover{
+        width: 45%;
+        }
+    }
+    /*TODO ESTO DE ARRIBA ES SOBRE EL MENU SLIDER */
+
+
+
+
+
+    /*ESTO ES SOBRE EL BADGRUND 1*/
+    .fond1 {
+        background: url(https://www.electricista.net.pe/wp-content/uploads/2018/11/electricista-24-horas.jpg);
+        flex-wrap: wrap;
+        background-repeat: no-repeat; /*    ESTO ES PARA QUE LA IMAGEN NO SE REPITA SI ES DEMASIDO GRANDE */
+        background-size: 100%; /* ESTO ES PARA QUE LA IMAGEN SE ACOPLE A UN TAMANO DETERMIANDO COMO UN CUADRADO */
+        display: flex;
+        max-width: 100% ;
+        padding: 40%;
+        object-fit: cover;
+    
+    }
+    .badground1 .capa1 {
+        position: absolute; /* LA POSITION RELATIVE SE UTILIZA PARA PODER JUGAR O MODICAR EL DIV CON LOS COMANDOS COMO WIDTH,
+        TOP, HEIGHT ,ETC. ES DECIR CON (RELATIVE) NO CAMBIA SU POSICION SINO QUE NOSOTROS LO DEFINIMOS.
+        Y CON POSITION ABSOLUTE SE VA DRECTO AL HEADER, COMO TAMBIEN NOSOTROS PODEMOS MANDAR HASTA DONDE QUEREMOS QUE VAYA
+        JUGANDO CON EL POSITION RELATIVE */
+        width: 100%;
+        padding: 33.2% 0%;
+        top: 0;
+        left: 0;
+        background: #1b1b1b;
+        opacity: 0.5;
+        mix-blend-mode: overlay;
+        object-fit: cover;
+    }
+
+    .data-container {
+      margin-top: -72%;
+    }
+
+   .data-container .btn {
+     color: #ffffff;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     text-align: center;
+     margin-left: -50%;
+     font-size: 40px;
+   }
+    /*----------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+/* Sections Common
+--------------------------------*/
+
+.containertod {
+    margin-top: -11%;
+}
+.section-title {
+    font-size: 28 px;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .section-description {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-title-divider {
+    width: 50px;
+    height: 3px;
+    background: #03C4EB;
+    margin: 0 auto;
+    margin-top: 0;
+    
+  }
+
+
+  /*===========================
+  ESTO ES SOBRE CARDS CONTANT
+============================ */
+
+.container_cards {
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+  }
+  #containertod {
+      margin-top: 0%;
+  }
+  
+  
+  .card {
+   width: 300px;
+   background: rgb(255, 255, 255);
+   margin: 10px;
+   border: 2px solid #8bdad3;
+   transition: all 300ms;
+   
+  }
+  
+  
+  
+  
+  
+  .card .cover {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    
+  }
+  .card .cover img {
+   width: 220px;
+   position: relative;
+   z-index: 1;
+   top:40px;
+   filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+   transition: all 400ms;
+   margin-left: 48px;
+  }
+  .card:hover .cover img {
+    top: 0px;
+    filter: none;
+  }
+  
+  
+  
+  .card .img_bank {
+    width: 100%;
+    height: 200px;
+    bottom: -80px;
+    left: 0;
+    position: absolute;
+    background-size: cover;
+    top: -50px;
+    border-radius: 20px;
+    transition: all 300ms;
+  }
+  
+  .card .img_bank:hover {
+    bottom: -40px;
+  }
+  
+  .card:nth-of-type(1) .img_bank {
+    background-image: url(../img/bg1.jpg);
+  }
+  
+  
+  
+  .card .description {
+    background: #fff;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms ;
+  }
+  
+  .card .description h2 {
+    margin-top: 10px;
+  }
+  .card .description p {
+    margin-top: 10px;
+  }
+  .butt2 {
+    padding: 13px 30px;
+    margin-top: 20px;
+    border: none;
+    background: #a121a5;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+    
+  }
+  .butt2:hover {
+    background: #330435;
+  }
+  
+
+
+
+  /* Services Section
+--------------------------------*/
+#services {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/services-bg.jpg") fixed center center;
+    background-size: cover;
+    padding: 80px 0 60px 0;
+    display: grid;
+    flex-wrap: wrap;
+    min-width: 250px;
+    
+  }
+  
+  #services .service-item {
+    margin-bottom: 20px;
+  }
+  
+  #services .service-icon {
+    float: left;
+    background: #03C4EB url(../img/pc.png) no-repeat center; /* ESTO ES PARA INCLUIR UN COLOR FONDO CON UN DISEÑO DE BORDER
+    Y ENCIMA UNA IMAGEN PNG NO REPETIDA Y CENTRADA*/
+    
+    
+    padding: 20px;
+    margin-left: 2%;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #03C4EB;
+  }
+  
+  #services .service-icon i {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  #services .service-item:hover .service-icon {
+    background: #fff;
+  }
+  
+  #services .service-item:hover .service-icon i {
+    color: #03C4EB;
+  }
+
+    /*==========ESTO ES SOBRE EL ICONO 2 DE TRABAJOS======*/
+
+  #services .service-icon2 {
+    float: left;
+    background: #03C4EB url(../img/estadist.png) no-repeat center; /* ESTO ES PARA INCLUIR UN COLOR FONDO CON UN DISEÑO DE BORDER
+    Y ENCIMA UNA IMAGEN PNG NO REPETIDA Y CENTRADA*/
+    
+    
+    padding: 20px;
+    margin-left: 2%;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #03C4EB;
+  }
+  
+  #services .service-icon2 i {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  #services .service-item:hover .service-icon2 {
+    background: #fff;
+  }
+  
+  #services .service-item:hover .service-icon2 i {
+    color: #03C4EB;
+  }
+
+
+
+/*SERVICIO3*/
+  #services .service-icon3 {
+    float: left;
+    background: #03C4EB url(../img/check.png) no-repeat center; /* ESTO ES PARA INCLUIR UN COLOR FONDO CON UN DISEÑO DE BORDER
+    Y ENCIMA UNA IMAGEN PNG NO REPETIDA Y CENTRADA*/
+    
+    
+    padding: 20px;
+    margin-left: 2%;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #03C4EB;
+  }
+  
+  #services .service-icon3 i {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  #services .service-item:hover .service-icon3 {
+    background: #fff;
+  }
+  
+  #services .service-item:hover .service-icon3 i {
+    color: #03C4EB;
+  }
+
+
+  /*SERVICIO4*/
+  #services .service-icon4 {
+    float: left;
+    background: #03C4EB url(../img/data-solid-24\ \(1\).png) no-repeat center; /* ESTO ES PARA INCLUIR UN COLOR FONDO CON UN DISEÑO DE BORDER
+    Y ENCIMA UNA IMAGEN PNG NO REPETIDA Y CENTRADA*/
+    
+    
+    padding: 20px;
+    margin-left: 2%;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #03C4EB;
+  }
+  
+  #services .service-icon4 i {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  #services .service-item:hover .service-icon4 {
+    background: #fff;
+  }
+  
+  #services .service-item:hover .service-icon4 i {
+    color: #03C4EB;
+  }
+
+
+
+
+ /*SERVICIO5*/
+ #services .service-icon5 {
+  float: left;
+  background: #03C4EB url(../img/line-chart-regular-24.png) no-repeat center; /* ESTO ES PARA INCLUIR UN COLOR FONDO CON UN DISEÑO DE BORDER
+  Y ENCIMA UNA IMAGEN PNG NO REPETIDA Y CENTRADA*/
+  
+  
+  padding: 20px;
+  margin-left: 2%;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #03C4EB;
+}
+
+#services .service-icon5 i {
+  color: #fff;
+  font-size: 24px;
+}
+
+#services .service-item:hover .service-icon5 {
+  background: #fff;
+}
+
+#services .service-item:hover .service-icon5 i {
+  color: #03C4EB;
+}
+
+/*SERVICIO6*/
+#services .service-icon6 {
+  float: left;
+  background: #03C4EB url(../img/world-regular-24.png) no-repeat center; /* ESTO ES PARA INCLUIR UN COLOR FONDO CON UN DISEÑO DE BORDER
+  Y ENCIMA UNA IMAGEN PNG NO REPETIDA Y CENTRADA*/
+  
+  
+  padding: 20px;
+  margin-left: 2%;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #03C4EB;
+}
+
+#services .service-icon6 i {
+  color: #fff;
+  font-size: 24px;
+}
+
+#services .service-item:hover .service-icon6 {
+  background: #fff;
+}
+
+#services .service-item:hover .service-icon6 i {
+  color: #03C4EB;
+}
+
+
+
+  
+  #services .service-title {
+    margin-left: 82px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    
+    
+  }
+  
+  #services .service-title a {
+    color: #111;
+   
+   
+
+  }
+  
+  #services .service-description {
+    margin-left: 74px;
+    line-height: 24px;
+    
+
+  }
+   .row2 {
+   margin-left: 6%;
+  }
+
+
+  /* ESTO DE ABAJO ES SOBRE EL CONTENEDOR DE BOTON DIRECT A CONTACT
+--------------------------------*/
+#subscribe {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/FONDODECONTACT.jpg) fixed center center;
+    background-size: cover;
+    padding: 80px 0;
+  }
+  
+  #subscribe .subscribe-title {
+    color: #fff;
+    font-size: 28px;
+    margin-left: 7%;
+    font-weight: 700;
+  }
+  
+  #subscribe .subscribe-text {
+    color: #fff;
+    margin-left: 7%;
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 30ch; /*ESTO ES PARA VER LOS PASOS DE CADA LETRA DE LO QUE ESCRIBIMOS JUNTO CON UN STEPS DE(N) */
+    animation: typing 3s steps(30) infinite, blink 5s infinite step-end alternate;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    
+}
+@keyframes typing {
+    0% {
+        width: 0 }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+  
+  
+  #subscribe .subscribe-btn-container {
+    text-align: center;
+    padding-top: 20px;
+    
+  }
+  
+  #subscribe .subscribe-btn {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    
+  }
+  
+  #subscribe .subscribe-btn:hover {
+    background: #03C4EB;
+    border: 2px solid #03C4EB;
+  }
+
+
+
+
+  /*=================
+  TODO ESTO ES SOBRE EL LOGO FLOAT DE WSP==========*/
+
+  .btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

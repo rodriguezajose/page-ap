@@ -1,0 +1,443 @@
+body{
+    margin:0px;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #e9e9e9;
+    
+    }
+    /*TODO ESTO ES SOBRE EL MENU SLIDER */
+    .barra {
+        font-family: 'Lato', sans-serif;
+        /**Alto y ancho de donde se va a activar cuando pase el mouse**/
+        width:10%;
+        height:9%;
+        /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+        position:fixed;
+        /*Tiempo en el que va a transitar la animacion*/
+        transition: .4s all ;
+        /*este arriba de todo en la pantalla*/
+        z-index: 2;  
+       
+    }
+    
+    .barra ul{
+        /*solucionar espacios no deseados*/
+        padding:0px;
+        text-align: center;
+            
+    }
+    .barra  li{
+        /*Velocidad de transicion del contenido*/
+        transition:all .3s;
+        list-style: none; 
+        
+    }
+    .barra h4 {
+        margin-bottom: 25%; /* ESTO ES PARA DARLE UN ESPACIO EN EL MENU CON INICIO */
+        
+        
+    }
+    
+    .barra a{
+        text-decoration: none;
+        
+        font-weight: normal;
+        
+        /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+        transition: .3s all ;
+        /*Se ocultan los elementos*/
+        font-size: 0px;
+        padding:0px;
+    }
+    
+    .barra  h4{
+        text-align: center;
+        color:white;
+        padding:7px;
+        padding-bottom:7px;
+    
+        /*Se oculta el h2*/
+        font-size:0px;   
+    }
+    
+    .barra img{
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+    
+    .barra:hover{
+        /*Tamaño cuando el cursor señale la barra*/
+        width: 60%;
+        height: 100vh;
+        
+        
+        /*Color*/
+        background: rgba(22, 22, 22, 0.98);
+        
+    }
+    .barra:hover h4{
+        /*posicion dentro de barra del h2*/
+        padding:15px;
+        font-size: 15px; /* AQUI PUEDO CAMBIAR EL TAMAÑO DEL TITULO DEL MENU SLIDER */
+    }
+    .barra:hover a{ 
+        font-size:20px ;
+        color:white;
+        /*Se usa el display block para que el enlace respete el margin*/
+        display: block;
+        padding:20px;
+        border-left: 4px solid #ffffff;/* ESTO ES PARA DARLE EFECTO DE GORDE LEFT SOLO PARA UN LADO */
+        
+    }
+    .barra:hover img{
+        /*Desaparecer la imagen*/
+        height:0px;
+    }
+    
+    
+    .barra:hover li{
+        border-top:1px solid #0e0e0e;
+        /*Espacios entre las lineas y el contenido*/
+        
+        width:100%;
+        margin-top: 4%;
+            
+    }
+    .barra:hover ul:last-of-type{
+    
+    
+        border-bottom: 1px solid #0e0e0e;
+    }
+    
+    .barra:hover a:hover{ 
+        font-size: 25px;
+        padding: 25px 0px; 
+        background: rgba(21, 132, 139, 0.98);  
+    }
+    
+    @media (min-width: 768px){
+        .barra:hover{
+        width: 45%;
+        }
+    }
+    /*TODO ESTO DE ARRIBA ES SOBRE EL MENU SLIDER */
+
+
+    /*================
+    ESTO ES PARA TIT DE EFECT REBOTE=====*/
+    
+
+    .titul-rebot {
+        text-align: center;
+        margin-top: -50%;
+        
+        
+      }
+      .titul-rebot h1 {
+        font-size: 32px;
+        margin-left: -48%;
+        margin-top: -60%;
+        margin-bottom: -10%;
+        color: #ffffff;
+        display: inline-block;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      
+      .text4 {
+        animation: bounce1 .7s alternate infinite ease-in;
+      }
+      .text5 {
+        animation: bounce2 .7s alternate infinite ease-in;
+      }
+      .text6 {
+        animation: bounce3 .7s alternate infinite ease-in;
+       
+      }
+      @keyframes bounce1 {
+        0% {
+          transform: translateX(-40%);
+        }
+        100% {
+          transform: translateX(-53%);
+        }
+      }
+      @keyframes bounce2 {
+        0% {
+          transform: translateY(-180%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+      @keyframes bounce3 {
+        0% {
+          transform: translateX(80%);
+        }
+        100% {
+          transform: translateX(110%);
+        }
+      }
+
+
+    /*ESTO ES SOBRE EL BADGRUND 1*/
+    .fond1 {
+        background: url(../img/fondo2servicios.jpg);
+        flex-wrap: wrap;
+        background-repeat: no-repeat; /*    ESTO ES PARA QUE LA IMAGEN NO SE REPITA SI ES DEMASIDO GRANDE */
+        background-size: 100%; /* ESTO ES PARA QUE LA IMAGEN SE ACOPLE A UN TAMANO DETERMIANDO COMO UN CUADRADO */
+        display: flex;
+        max-width: 100% ;
+        object-fit: cover;
+    
+    }
+    .badground1 .capa1 {
+        position: absolute; /* LA POSITION RELATIVE SE UTILIZA PARA PODER JUGAR O MODICAR EL DIV CON LOS COMANDOS COMO WIDTH,
+        TOP, HEIGHT ,ETC. ES DECIR CON (RELATIVE) NO CAMBIA SU POSICION SINO QUE NOSOTROS LO DEFINIMOS.
+        Y CON POSITION ABSOLUTE SE VA DRECTO AL HEADER, COMO TAMBIEN NOSOTROS PODEMOS MANDAR HASTA DONDE QUEREMOS QUE VAYA
+        JUGANDO CON EL POSITION RELATIVE */
+        width: 100%;
+        padding: 29.8% 0%;
+        top: 0;
+        left: 0;
+        background: #1b1b1b;
+        opacity: 0.5;
+        mix-blend-mode: overlay;
+        object-fit: cover;
+    }
+
+
+  /*----------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+/* Sections Common
+--------------------------------*/
+
+.containertod {
+    margin-top: -19%;
+}
+.section-title {
+    font-size: 26px;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .section-description {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  
+
+
+
+  .galeria{
+    font-family: 'open sans';
+}
+
+.galeria h1{
+    text-align: center;
+    margin:20px 0 15px 0;
+    font-weight: 300;
+}
+
+.linea{
+    border-top: 5px solid #397ac4;/*ESTO ES PARA PONER UNA LINEA DE TOP RHIGT A LEFT 100%*/
+    margin-bottom: 40px;
+}
+
+.contenedor-imagenes{
+    display:flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius:3px;
+}
+
+.contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height:250px;
+    margin-bottom:5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+}
+.imagen img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:rgba(19, 192, 204, 0.781) ;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.overlay h2{
+    color: #fff;
+    font-weight: 300;
+    font-size:30px;
+    position: absolute;
+    top: 30%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.btnhover {
+    justify-content: center;
+    margin-left: 36%;
+    margin-top: 47%;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: 1px solid hsl(0, 0%, 100%);
+    cursor: pointer;
+    width: 27%;
+    padding: 2% 0%;
+}
+.btnhover:hover {
+    background: #1b1b1b;
+    transition: all 300ms ease;
+    border: none;
+}
+
+.imagen:hover .overlay{
+    height:100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+    h1{
+        font-size:22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
+
+
+
+    
+
+/*=============================
+ESTO ES SOBRE EL FOTER DEL 2 NO IMPORT
+===============*/
+
+/*Aquí debajo va el FOOTER*/
+
+footer{
+  width: 100%;
+  padding: 50px 0px;
+  margin-top: 15%;
+  background-image: url(../img/background-footerori.svg);
+  background-size: cover;
+ 
+ 
+}
+
+.container__footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.box__footer{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin-top: -2%;
+}
+
+.box__footer .logo img{
+  width: 180px;
+}
+
+.box__footer .terms{
+  max-width: 350px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #7a7a7a;
+  font-size: 18px;
+}
+
+.box__footer h2{
+  margin-bottom: 30px;
+  color: #343434;
+  font-weight: 700;
+}
+
+.box__footer a{
+  margin-top: 10px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.box__footer a:hover{
+  opacity: 0.8;
+}
+
+.box__footer a .fab{
+  font-size: 20px;
+}
+
+.box__copyright{
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.box__copyright p{
+  margin-top: 20px;
+  color: #7a7a7a;
+}
+
+.box__copyright hr{
+  border: none;
+  height: 1px;
+  background-color: #7a7a7a;
+}
+
+.imgfooter5 {
+  margin-left: 37%;
+}
+
+.imgfooter6 {
+  margin-left: 36%;
+}
+.imgfooter7 {
+  margin-left: 46%;
+}
+.imgfooter8 {
+  margin-left: 33%;
+}
+
+  
